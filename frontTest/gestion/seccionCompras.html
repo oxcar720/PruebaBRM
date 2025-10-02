@@ -1,0 +1,62 @@
+<div class="compras-seccion">
+  <h2>Compras (Carrito)</h2>
+
+  <div class="acciones-compras">
+    <button onclick="abrirCarrito()" id="btnVerCarrito">Comprar (0)</button>
+    <button onclick="limpiarCarrito()">Limpiar Carrito</button>
+  </div>
+
+  <table id="tablaComprasProductos" class="tabla-estilizada">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Lote</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Stock Disponible</th>
+        <th>Fecha Ingreso</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- Modal Añadir al Carrito -->
+<div id="modalCantidadCarrito" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalCantidadCarrito()">&times;</span>
+    <h3>Añadir al Carrito</h3>
+    <form id="formCantidadCarrito" onsubmit="confirmarAgregarCarrito(event)">
+      <input type="hidden" id="productoIdCarrito">
+      <p id="productoNombreCarrito"></p>
+      <div class="pares">
+        <label>Cantidad:</label>
+        <input type="number" id="cantidadProductoCarrito" min="1" required>
+      </div>
+      <button type="submit">Añadir</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Carrito Completo -->
+<div id="modalCarrito" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalCarrito()">&times;</span>
+    <h3>Carrito de Compras</h3>
+    <table id="tablaCarrito" class="tabla-estilizada">
+      <thead>
+        <tr>
+          <th>ID Producto</th>
+          <th>Lote</th>
+          <th>Nombre</th>
+          <th>Precio Unitario</th>
+          <th>Cantidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button onclick="confirmarCompra()">Confirmar Compra</button>
+  </div>
+</div>

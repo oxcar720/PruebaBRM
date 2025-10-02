@@ -1,0 +1,61 @@
+<div class="logs-seccion">
+  <h2>Registros del sistema</h2>
+
+  <div class="acciones-logs">
+    <button onclick="cambiarPagina(-1)" id="btnPrev">&lt;</button>
+    <button onclick="cambiarPagina(1)" id="btnNext">&gt;</button>
+  </div>
+
+  <table id="tablaLogs" class="tabla-estilizada">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Fecha</th>
+        <th>URL</th>
+        <th>Tipo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- Modal Detalle Log -->
+<div id="modalDetalleLog" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalLog()">&times;</span>
+    <h3>Detalle del Log</h3>
+    <p><b>ID:</b> <span id="detalleId"></span></p>
+    <p><b>Fecha:</b> <span id="detalleFecha"></span></p>
+    <p><b>URL:</b> <span id="detalleUrl"></span></p>
+    <p><b>Tipo:</b> <span id="detalleTipo"></span></p>
+    <p><b>Status:</b> <span id="detalleStatus"></span></p>
+
+    <h4>Contenido de la petición:</h4>
+    <pre id="detallePeticion" class="log-contenido"></pre>
+
+    <h4>Contenido de la respuesta:</h4>
+    <pre id="detalleRespuesta" class="log-contenido"></pre>
+  </div>
+</div>
+
+<style>
+  /* Evita que el contenido del log rompa el modal */
+  .modal-contenido {
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .log-contenido {
+    max-height: 200px;   /* límite vertical */
+    overflow-y: auto;    /* scroll vertical si es necesario */
+    overflow-x: auto;    /* scroll horizontal si es necesario */
+    white-space: pre-wrap; /* ajusta líneas largas */
+    word-break: break-word;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+</style>

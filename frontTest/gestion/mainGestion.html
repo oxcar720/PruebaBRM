@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión - Panel</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div id="mensaje"></div>
+  <header>
+    <div class="centrado_horizontal">
+        <img src="/frontTest/public/logo_brm.png">
+        <h1>Panel de Gestión</h1>
+        <div id="info-usuario" class="usuario-info"></div>
+        <nav>
+        <button onclick="cargarSeccion('usuarios')">Usuarios</button>
+        <button onclick="cargarSeccion('productos')">Productos</button>
+        <button onclick="cargarSeccion('ventas')">Ventas</button>
+        <button onclick="cargarSeccion('compras')">Comprar</button>
+        <button onclick="cargarSeccion('logs')">Logs</button>
+        </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    
+  </main>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/productos.js"></script>
+  <script src="../js/usuarios.js"></script>
+  <script src="../js/ventas.js"></script>
+  <script src="../js/compras.js"></script>
+  <script src="../js/logs.js"></script>
+</body>
+</html>

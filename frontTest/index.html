@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>BRM Pruebas</title>
+  <link rel="stylesheet" href="/frontTest/css/styles.css">
+</head>
+<body>
+  <div id="mensaje"></div>
+
+  <div class="contenedor-principal">
+    <div class="logo">
+      <img src="/frontTest/public/logo_brm.png">
+    </div>
+
+    <form class="login-form" onsubmit="login(); return false;">
+    <input type="text" id="usuario" placeholder="Usuario" autocomplete="username">
+    <input type="password" id="password" placeholder="Contraseña" autocomplete="current-password">
+    <button type="submit">Iniciar Sesión</button>
+    </form>
+
+  </div>
+
+  <script src="/frontTest/js/main.js"></script>
+</body>
+</html>

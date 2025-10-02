@@ -1,0 +1,95 @@
+<div class="usuarios-seccion">
+  <h2>Usuarios</h2>
+  <div class="botones-usuarios">
+    <button onclick="crearUsuario()">Crear Usuario</button>
+  </div>
+
+  <table id="tablaUsuarios" class="tabla-estilizada">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Login</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Rol</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <!-- Modal Crear Usuario -->
+<div id="modalCrearUsuario" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalCrearUsuario()">&times;</span>
+    <h3>Crear Usuario</h3>
+    <form id="formCrearUsuario" onsubmit="guardarNuevoUsuario(event)">
+        <div class="pares">
+            <label>Login (obligatorio):</label>
+            <input type="text" id="nuevoLogin" required>
+        </div>
+        <div class="pares">
+            <label>Password (obligatorio):</label>
+            <input type="password" id="nuevoPassword" required>
+        </div>
+        <div class="pares">
+            <label>Nombre:</label>
+            <input type="text" id="nuevoNombre">
+        </div>
+        <div class="pares">
+            <label>Correo:</label>
+            <input type="email" id="nuevoCorreo">
+        </div>
+        <div class="pares">
+            <label>Teléfono:</label>
+            <input type="text" id="nuevoTelefono">
+        </div>
+      <label>Rol (obligatorio):</label>
+      <select id="nuevoRol" required>
+        <option value="">Seleccione un rol</option>
+        <option value="1">Admin</option>
+        <option value="2">Cliente</option>
+      </select>
+
+      <button type="submit">Guardar</button>
+    </form>
+  </div>
+</div>
+<!-- Modal Actualizar Usuario -->
+<div id="modalActualizarUsuario" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalActualizarUsuario()">&times;</span>
+    <h3>Actualizar Usuario</h3>
+    <form id="formActualizarUsuario" onsubmit="guardarUsuarioActualizado(event)">
+      <input type="hidden" id="editId">
+      <div class="pares">
+        <label>Login (obligatorio):</label>
+        <input type="text" id="editLogin" required>
+      </div>
+      <div class="pares">
+        <label>Nombre:</label>
+        <input type="text" id="editNombre">
+      </div>
+      <div class="pares">
+        <label>Correo:</label>
+        <input type="email" id="editCorreo">
+      </div>
+      <div class="pares">
+        <label>Teléfono:</label>
+        <input type="text" id="editTelefono">
+      </div>
+      <div class="pares">
+        <label>Rol (obligatorio):</label>
+        <select id="editRol" required>
+          <option value="">Seleccione un rol</option>
+          <option value="1">Admin</option>
+          <option value="2">Cliente</option>
+        </select>
+      </div>
+
+      <button type="submit">Actualizar</button>
+    </form>
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,86 @@
+<div class="productos-seccion">
+  <h2>Productos</h2>
+  <div class="botones-productos">
+    <button onclick="crearProducto()">Crear Producto</button>
+  </div>
+
+  <table id="tablaProductos" class="tabla-estilizada">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Lote</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Fecha ingreso</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<!-- Modal Crear Producto -->
+<div id="modalCrearProducto" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalCrearProducto()">&times;</span>
+    <h3>Crear Producto</h3>
+    <form id="formCrearProducto" onsubmit="guardarNuevoProducto(event)">
+      <div class="pares">
+        <label>Lote (obligatorio):</label>
+        <input type="text" id="nuevoLoteProducto" required>
+      </div>
+      <div class="pares">
+        <label>Nombre (obligatorio):</label>
+        <input type="text" id="nuevoNombreProducto" required>
+      </div>
+      <div class="pares">
+        <label>Precio (obligatorio):</label>
+        <input type="number" id="nuevoPrecioProducto" step="0.01" required>
+      </div>
+      <div class="pares">
+        <label>Stock (obligatorio):</label>
+        <input type="number" id="nuevoStockProducto" required>
+      </div>
+      <div class="pares">
+        <label>Fecha ingreso (obligatorio):</label>
+        <input type="date" id="nuevaFechaIngresoProducto" required>
+      </div>
+      <button type="submit">Guardar</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Actualizar Producto -->
+<div id="modalActualizarProducto" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModalActualizarProducto()">&times;</span>
+    <h3>Actualizar Producto</h3>
+    <form id="formActualizarProducto" onsubmit="guardarProductoActualizado(event)">
+      <input type="hidden" id="editIdProducto">
+
+      <div class="pares">
+        <label>Lote:</label>
+        <input type="text" id="editLoteProducto" required>
+      </div>
+      <div class="pares">
+        <label>Nombre:</label>
+        <input type="text" id="editNombreProducto" required>
+      </div>
+      <div class="pares">
+        <label>Precio:</label>
+        <input type="number" id="editPrecioProducto" step="0.01" required>
+      </div>
+      <div class="pares">
+        <label>Stock:</label>
+        <input type="number" id="editStockProducto" required>
+      </div>
+      <div class="pares">
+        <label>Fecha ingreso:</label>
+        <input type="date" id="editFechaIngresoProducto" required>
+      </div>
+
+      <button type="submit">Actualizar</button>
+    </form>
+  </div>
+</div>

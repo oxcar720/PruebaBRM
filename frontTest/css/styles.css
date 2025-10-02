@@ -1,0 +1,139 @@
+/* css/style.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+#mensaje {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.mensaje.error {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.mensaje.exito {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form input {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.centrado_horizontal{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column; /* título arriba, luego info-usuario + nav */
+  padding: 0 10px;
+}
+
+#info-usuario {
+  align-self: flex-end;   /* manda este bloque a la derecha */
+  margin: 10px 0;         /* separación del resto */
+  font-size: 14px;
+  color: #333;
+  background: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.tabla-estilizada {
+  width: 100%;
+  border-collapse: collapse; /* hace que los bordes se unan */
+  margin-top: 15px;
+}
+
+.tabla-estilizada th,
+.tabla-estilizada td {
+  border: 1px solid #ccc; /* color gris suave */
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.tabla-estilizada thead {
+  background-color: #f4f4f4;
+}
+
+.tabla-estilizada tr:nth-child(even) {
+  background-color: #fafafa; /* filas alternadas */
+}
+
+.tabla-estilizada button {
+  margin-right: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center; align-items: center;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  width: 530px;
+  max-width: 90%;
+}
+
+.cerrar {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
